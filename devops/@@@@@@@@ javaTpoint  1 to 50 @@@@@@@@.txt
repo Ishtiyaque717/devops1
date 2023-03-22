@@ -1,0 +1,326 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@	Java Tpoint	@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+1) What is Java?
+	high level programming > devlop large scale application > object oriented > robust > secure > platform independent 
+
+2) What are the differences between C++ and Java?
+	C++ 	> is platform dependent > used for system programming > supports goto statement > supports multiple inheritance > supports operator overloading > uses compiler only > supprots call by value and call by reference
+	Java	> is platform independent > used for application programming > doesn't support goto statement > doesn't support multiple inheritance through class, but achieved by interfaces > doesn't support operator overloading > uses compiler and interpreter both >  supports call by value only > 
+
+3) List the features of Java Programming language.
+	a) simple : easy to learn +-
+	b) object oriented :   which supports concepts like polymorphism, inheritance, abstraction, etc
+	c) portable : supports read once write anywhere > execute on every machine
+	d) platform independent : doesn't depend upon the operating system to be executed
+	e) secured : bcoz it doesn't use explicit pointers.
+	f) robust: bcoz it uses strong memory management ( like automatic garbage collection, Exception handling etc)
+
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+4) What do you understand by Java virtual machine?
+	it is a virtual machine > it is an abstract machine which provides runtime environment in which java byte code will be executed > it is the specification for java runtime environment and > and its implementation are given by different different company >
+
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+5) What is the difference between JDK, JRE, and JVM?
+	a) JDK 	>> 
+	the Java Development Kit (JDK) is a software development environment which is used to develop java applications
+	it is a java devlopment kit, and it is a combination of JRE+ devlopement tools such as( compilation tool, garbage collection monitoring tool etc)
+
+	b) JRE	>> JRE is java runtime environment > it is a implementation of JVM. > in which byte code are executed > it is a set of software tools which are used for developing java application
+
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+6) How many types of memory areas are allocated by JVM?
+	there are 5 types of memory area in jvm
+	a) Heap :-	it is used to store object in java,
+	b) Stack :- it is used to track the execution of program and local variables are stroed in stack,
+	c) Meta Space
+	( permenet gereration (string pool+method area+Static area):- removed in java7 
+	method area and static variables are included in metaspace.
+	method area is the memory where java loaded method or classes are present
+	Static area is the area in which static context fields are stored.
+	Meta space is growable in nature
+nformation of classes was stored in PremGen (Permanent-Generation) memory type before Java 8. PremGen is fixed in size and cannot be dynamically resized. It was a contiguous Java Heap Memory.
+
+MetaSpace: Java 8 stores the MetaData of classes in native memory called 'MetaSpace'. It is not a contiguous Heap Memory and hence can be grown dynamically which helps to overcome the size constraints. This improves the garbage collection, auto-tuning, and de-allocation of metadata.
+
+
+	d) native method Stack:- it is the stack for native language methods
+
+	e) Pc registor:- it is a memory used by the cpu, it holds the instruction of the respective thread, every thread has its own program counter register
+
+
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+
+7) What is JIT compiler?
+	> it is a component of the runtime environment that improves the performance of Java applications
+	what happen is when we compile a java class, a .class file will be created then that .class file can be executed,
+	so if there is no just in time compiler ,the bytecode will be compile line by line.
+	if jit compiler is there , then it compiles the similar functionality bytcode and keep it ready and whenever the similar functionality byte code is need agained then ratherthen compiling the code again it directly provide the already compiled code.
+	bcoz of this reason performance is improved.
+
+
+
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+8) What is the platform?
+	platform is any softwre or hardware where we can execute a program.
+
+
+9) What are the main differences between the Java platform and other platforms?
+	java is a software platform and which runs on different hardware
+	
+
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+10) What gives Java its 'write once and run anywhere' nature?
+	In Java, the program is not converted to code directly understood by Hardware, rather it is converted to bytecode(.class file)  The bytecode is interpreted by JVM. The bytecode file generated after the code compilation can be run anywhere or on any machine with JVM (Java Virtual Machine). Thus, Java holds the behavior of WORA (Write Once Run Anywhere).
+
+
+11) What is classloader?
+	ClassLoader is a part of the JRE that dynamically loads java classes into the java Virtual machine. > whenever we run the java program, it is loaded first by the classloader. > there are three built-in classloaders in java
+	i) Bootstrap ClassLoader :- this is the superclass of Extension Classloader > it loads rt.jar file which contains > java.lang package classes, java.net package classes, java.util package classes, java.io package classes, java.sql package classes etc
+	ii) Extension classLoader :- this is the child class loader of Bootstrap > And parent classloader of system classloader. > it loads the jar files located inside $JAVA_HOME/jre/lib/ext directory.
+	iii) System/Application Classloader :-  this is the child classloader of Extension Classloader > it loads the class files from the classpath
+
+
+12) Is Empty .java file name a valid source file name?
+	Yes, Java allows to save our java file by .java only, we need to compile it by javac .java and run by java classname 
+
+13) Is delete, next, main, exit or null keyword in java?
+	NO.
+	but null is a keyword
+
+14) If I don't provide any arguments on the command line, then what will the value stored in the String array passed into the main() method, empty or NULL?
+	It is empty, but not null.
+
+
+15) What if I write static public void instead of public static void?
+	compiles fine > runs correctly > bcoz the order of specifier doesn't matter in java
+
+
+16) What is the default value of the local variables?
+	the local variables are not initialized to any default value, neither primitives not object reference > Local variable have to initialize explicitly otherwise we will get CE.
+
+
+17) What are the various access specifiers in Java?
+	access specifiers are the keywords which are used to define the access scope of the method, class, or a variable. In Java, there are four access specifiers given below.
+	i) public ii) protected iii) default iv) private
+
+
+18) What is the purpose of static methods and variables?
+	The static variable is a class level variable and it is common to all the class objects i.e. a single copy of the static variable is shared among all the class objects.
+	A static method belongs to the class instead of the class objects and can be invoked without using a class object.
+
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+19) What are the advantages of Packages in Java?
+	> avoid naming conflicts
+	> provide easier access control 
+	> It is also easier to locate the related classes.  
+	> you can put similar functionality classes in one package, which will improve modularity of the code 
+
+20) What is the output of the following Java program?
+	  System.out.println(10 + 20 + "Javatpoint");   
+	  System.out.println("Javatpoint" + 10 + 20);  
+	
+	> 30 Javatpoint > Javatpoint1020
+
+
+21) What is the output of the following Java program?
+	System.out.println(10 * 20 + "Javatpoint");   
+	System.out.println("Javatpoint" + 10 * 20);
+
+	>200Javatpoint	> Javatpoint200	
+
+
+22) What is the output of the following Java program?
+       for(int i=0; 0; i++)   
+        {  
+            System.out.println("Hello Javatpoint");  
+        }  	
+	>>> CE > the for loop demands a boolean value in the second part
+
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+23) What is object-oriented paradigm?	`
+	it is a programming paradigm, which is based on the object.
+	includes the concepts like, inheritance, encapsulation, abstraction, polymorphisam
+
+
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+24) What is an object?
+	> A Java object is a member  of a Java class. > the object is the real time entity having some state and behavior > Object is an instance of the class having the instance variable as the state of the object and the methods as the behavior of the object. > created by using the new Keyword 
+
+
+25) What is the difference between an object-oriented programming language and object-based programming language?
+	> Object-oriented language follow all the concept of OOPs whereas, the object-based language doesn't follow all the concept of OOPs like inheritance and polymorphism
+	> Object-oriented languages do not have the inbuilt objects wehreas Object- based language have the inbuilt object, for ex: javaScript has window object.
+	> Examples of object-oriented programming are Java, C#, Smalltalk etc whereas the examples of object-based languages of javaScript, VBScript, etc.
+
+
+26) What will be the initial value of an object reference which is defined as an instance variable?
+	null
+
+27) What is the constructor?
+	>  is used to initialize the object. > it is a special type of method
+	> has the same name as its class and it is syntactically similar to a method. but constructor have no explicit return type.
+	> all classes have constructors, whether you define or not because java automatically provides a default constructor.
+	
+	
+
+28) How many types of constructors are used in Java?
+	> 2 type constructor > i) parameterized constructors ii) default constructor
+	Default Constructor :-  if we do not create any constructor, the java compiler automatically create a no-arg constructor during the execution of the program.this constructor is called default constructor.	
+	Parameterized Constructor :- A java constructor can also accept one or more parameters, such constructors are known as parameterized constructors.
+
+
+29) What is the purpose of a default constructor?
+	the purpose of the default constructor is to initializes the variables of the class with their default values.
+	if we do not define a class with any constructor then compiler provides default constructor	
+
+
+30) Does constructor return any value?
+	It does not have any explicit return type but it returns current instance of the specified class.
+
+31)Is constructor inherited?
+	No, The constructor is not inherited.
+
+
+32) Can you make a constructor final?
+	No, the constructor can't be final. > bcoz the constructor is not inherited.
+
+33) Can we overload the constructors?
+	Yes > the constructors can be overloaded 
+	> by changing the number of arguments or 
+	> by changing the data type of the parameters.
+
+34) What do you understand by copy constructor in Java?
+	In java, there is no copy constructor, copy constructor is a concept of c++.
+	But 
+	In java there are many way to create the copy of the object
+	1) clone() 2) by assigning the values of one object into another 3) by constructor
+
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+35) What are the differences between the constructors and methods?
+	Constructors :- 	> used to create and initialize an Object > No return Type > compiler provides a defualt constructor if there is no constructor in class > Constructor name must be same as the class name
+
+	java methods :-	> used to execute certain statement > must have return type > the method is not provided by the compiler in any case > method name may or may not be same as class name
+
+
+36) What is the output of the following Java program?
+
+@@@@@@
+public class Test   
+{  
+    Test(int a, int b)  
+    {  
+        System.out.println("a = "+a+" b = "+b);  
+    }  
+    Test(int a, float b)  
+    {  
+        System.out.println("a = "+a+" b = "+b);  
+    }  
+    public static void main (String args[])  
+    {  
+        byte a = 10;   
+        byte b = 15;  
+        Test test = new Test(a,b);  
+    }  
+}  
+@@@@@@
+
+	>> a=10 b=15 >> first constructor is called bcoz byte can be promoted to int
+
+
+37) What is the output of the following Java program?
+
+@@@@@@
+class Test   
+{  
+    int i;   
+}  
+public class Main   
+{  
+    public static void main (String args[])   
+    {  
+        Test test = new Test();   
+        System.out.println(test.i);  
+    }  
+}  
+@@@@@@
+
+	>> output is 0 > bcoz of default constructor.
+
+
+38) What is the output of the following Java program?
+@@@@@@
+class Test   
+{  
+    int test_a, test_b;  
+    Test(int a, int b)   
+    {  
+    test_a = a;   
+    test_b = b;   
+    }  
+    public static void main (String args[])   
+    {  
+        Test test = new Test();   
+        System.out.println(test.test_a+" "+test.test_b);  
+    }  
+}  
+@@@@@@
+	>> there is compile error in main bcoz we are creating object  with default constructor, but we provided parameterized constructor in the class,
+
+
+39) What is the static variable?
+	> when a variable is declared as static, then a single copy of the variable is created and shared among all objects at the class level.
+	> the static variable gets memory only once in the class area at the time of classs loading.
+	> using a static variable makes your program more memory efficient
+
+40) What is the static method?
+	> A static method belongs to the class rather than the object of a class.
+	> A static method can be invoked without the need for creating an instance of a class.
+	> every instance of a class has access to the method
+	> A static method can access static data member and can change the value of it.
+	>
+
+
+41) What are the restrictions that are applied to the Java static methods?
+	> Static method can not use non-static data member or call the non-static method directly	> this and super cannot be used in static context as they are non-static.
+
+42) Why is the main method static?
+	> bcoz object is not required to call the static method, if we make the main method non-static, JVM will have to create its object first and then call main() method which will lead to extra memory allocation
+
+
+43) Can we override the static methods?
+	> We can declare static methods with the same signature in the subclass, but it is not considered overriding as there won’t be any run-time polymorphism. Hence the answer is ‘No’.
+
+
+44) What is the static block?
+	Static block is used to initialize the static data member. It is executed before the main method, at the time of classloading.
+
+45) Can we execute a program without main() method?
+	No, It was possible before JDK 1.7 using the static block. Since JDK 1.7, it is not possible.
+
+46) What if the static modifier is removed from the signature of the main method?
+	Program compiles. However, at runtime, No main method
+
+47) What is the difference between static (class) method and instance method?
+
+	Static method				instance method
+a)A method that is declared as static is 		a) A method that is not declared as static is
+            known as the static method.		     known as the instance method.
+b) We don't need to create the objects		b) The object is required to call the instance 
+      to call the static methods.			     methods.
+c) Non-static members cannot be accessed	c) static and non-static variables both can be
+     in the static context					     be accessed in instance methods.
+
+
+48) Can we make constructors static?
+	> No > static context(method, block or variable) belongs to the class, not to the instance of the class
+	and constructors are invoked only when the object is created, hence there is no sense to make the constructors static.
+
+49) Can we make the abstract methods static in Java?
+	if we declare a method abstract, then we must override this method in subclass.
+	But overriding is not possible with static methods. therefore an abstract method can't be static.
+
+50) Can we declare the static variables and methods in an abstract class?
+	> yes, we can declare static variable and methods in an abstract class
+	> as we know there is no requirement to make the object to access the static context.
+	> therefore we can access the static context declared inside the abstract class by using the name of the class	
+

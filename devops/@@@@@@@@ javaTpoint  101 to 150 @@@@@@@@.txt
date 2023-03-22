@@ -1,0 +1,294 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@	Java Tpoint	@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+101) What is the difference between compile-time polymorphism and runtime polymorphism?
+
+	Compile-Time Polymorphisam		Run-Time Polymorphisam
+a)  it is also known as static binding, early 	a) it is also known as dynamic binding, late 
+      binding Or overloading			    binding Or overriding
+b) it is executed at the compile time.		b) it is executed at the run time
+c) the method is called with the help of		c) the method is not called with the help of
+     a compiler.				     a compiler.
+d) it is achieved by method overloading		d) it is achieved by method overriding
+e) it provides fast execution because the	e) it provides slower execution as compare 
+     type of an object is determined at		     to compile-time because the type of an 
+     compile-time.				     object is determined at run time.
+
+
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+000) what is compile time polymorphism ?
+	compile time polymorphism is a process in which a call to an overloaded method is resolve at compile time rather than at run time. 
+
+
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+102) What is Runtime Polymorphism?
+	Runtime polymorphism is a process in which a call to an overridden method is resloved at runtime rather than at compile time
+	In this process, an overridden method is called through the reference variable of a superclass. but it will decided at runtime as per the object.
+
+
+
+103) Can you achieve Runtime Polymorphism by data members?
+	No, 
+	A method is overridden, not the data members, so runtime polymorphism can't be achieved by data members
+
+
+104) What is the difference between static binding and dynamic binding?
+ 	> if the type of the object will be determined at the compile time is known as Static binding
+	> if the type of the object will be determined at run time is known as Dynamic binding
+
+105) What is the output of the following Java program?
+
+
+
+
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+
+106) What is Java instanceOf operator?
+	the instanceof keyword checks whether an object is an instance of a specific class or an Interface.
+	it returns either true or false.
+	it is also known as type comparision operator.
+
+
+107) What is the abstraction?
+	Abstraction is a process of hiding the implementation details and showing only functionality.
+	it displays just the essential things to the user and hides  the internal information
+	In Java, there are two ways to achieve the abstraction.
+	a) Abstract Class	b) Interface
+
+	
+108) What is the difference between abstraction and encapsulation?
+	Abstraction 	> it hides the implementation details
+	Encapsulation 	> it wraps code and data into a single unit.
+
+
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+109) What is the abstract class?
+	A class that is declared as abstract is known as an abstract class.
+	an abstract methods present in the abstract class should be implemented.
+	an instance of abstract class can not be created
+	it can have both abstract and non-abstract methods
+	it can have final methods. it can have static methods
+	it can have Constructors.
+
+
+110) Can there be an abstract method without an abstract class?
+	No, if there is an abstract method in a class, that class must be abstract.
+
+
+111) Is the following program written correctly? If yes then what will be the output of the program?
+
+
+
+112) Can you use abstract and final both with a method?
+	No, we can't use abstract and final both with a method.
+	bcoz, if a method is abstract then we have to override that method.
+	or
+	if a method is final then we can't override that method
+	hence the combination of abstract and final is not possible
+
+113) Is it possible to instantiate the abstract class?
+	No, we cant instantiate the object of the abstract class,
+	bcoz if it is allowed to instantiate then there can be abstract method or method without any body, and if anyone calls that method then it is wrong.
+	thats why we can't instantiate the abstract class
+
+
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+114) what is interface?
+	interface is a blue print for class that has static constants and abstract methods.
+	we can achieve full abstraction and multiple inheritance with the help of Interface,
+	by default every method of the interface is public and abstract.
+	by default every variable of the interface is public static and final.
+
+115) Can you declare an interface method static?
+	static methods cannot be overridden and therefore don't make sense as part of the interface.
+	But, you can create a static method with the body. this is after java 8.
+
+
+116) Can the Interface be final?
+	No, because an interface have abstract methods which must be implemented.
+
+
+117) what is marker interface?
+	a interface which doesn't have any data member and any method.
+	ex: coloneable interface And Serializable interface etc.
+	
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+118) What are the differences between abstract class and interface?
+
+	Abstract class				Interface
+a) abstract class have both abstract and	a) the interface has only abstract method
+      non abstract method.
+b) abstract class can have instance variables	b) An interface cannot have instance variables
+c) an abstract class can have the constructor	c) the interface cannot have the constructor
+d) an abstract class can have static methods	d)  the interface cannot have static methods
+e) An abstract class can extend another class 	e) An interface can extend another java
+     and implement multiple java interface	     interface only.
+f) you can extend only one abstract class	f) you can implement multiple interfaces.
+
+119) Can we define private and protected modifiers for the members in interfaces?
+	No, they are implicitly public.
+
+120) When can an object reference be cast to an interface reference?
+	An object reference can be cast to an interface reference when the object implements the referenced interface.
+
+
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+121) How to make a read-only class in Java?
+	a class can be made read-only :-
+		by making all of the fields private. &
+		by providing only getter methods.
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+122) How to make a write-only class in Java?
+	a class can be made write-only :-
+	 by making all of the fields private. &
+	by providing only setter methods by which we can set the fields
+
+123) What are the advantages of Encapsulation in Java?
+	Encapsulation means binding data together with method,
+	
+	To achieve this we create private variables and public setter and getter method.
+	so the advantage of this is we will have more control on the data members via methods.
+	for Example :- suppose we have one Insan class, and inside that you have instace variable as Age, so in the setter method we can write the logic which can check the age should no be less then 0. and this is the advantage of encapsulation.
+
+
+124) What is the package?
+	A package is a group of similar type of classes, interfaces, and sub packages,
+	it provides access protection and remove naming collision.
+
+
+125) What are the advantages of defining packages in Java?
+	package avoid the class name collision.
+	it provides access control
+
+
+
+
+127) how can we access some class in other class?
+	if  both the classes are within the same package then you can directly access with the help of class name,
+	if the classes are in different packages, then there are two ways 
+	1st :- by using fully qualified name
+	2nd:- by importing the package.
+
+128) Do I need to import java.lang package any time? Why?
+	No, it is by default loaded internally by the jvm.
+
+
+129) Can I import same package/class twice? Will the JVM load the package twice at runtime?
+	 JVM will internally load the class only once no matter how many times you import the same class.
+
+130) What is the static import?
+	By static import, we can access the static members of a class directly,
+
+131) How many types of exception can occur in a Java program?
+	two types of exception, 1) checked Exception 2) unchecked Exception
+	Checked Exception: Checked exceptions are those Exception which are checked at compile-time. For example, SQLException, ClassNotFoundException, etc.
+
+	Unchecked Exception: Unchecked exceptions are those exception which are handled at runtime because they can not be checked at compile-time. For example, ArithmaticException, NullPointerException, ArrayIndexOutOfBoundsException, etc.
+
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+132) What is Exception Handling?
+	Exception handling is a mechanisam to handle runtime error.
+	Exception handling maintains the normal flow of the program.
+	there are mainly two types of exception :- a) checked exception
+	b) unchecked exception.
+
+
+
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+133) Explain the hierarchy of Java Exception classes?
+	 > Exception
+Throwable
+	 >Error
+
+
+
+134) What is the difference between Checked Exception and Unchecked Exception?
+	Checked Exception :-
+		Checked Exceptions are checked at compile time.
+		Except RuntimeException and Error all classes that extend throwable class are known as checked Exception eg. IOException, SQLException, etc
+	
+	Unchecked Exception :-
+		Unchecked Exception are not checked at compile time.
+		the classes that extend RuntimeException are known as unchecked Exception. eg. ArithmeticException, NullPointerException, etc.
+
+135) What is the base class for Error and Exception?
+	Throwable calss is the base class for Error and Exception.
+
+
+136) Is it necessary that each try block must be followed by a catch block?
+	No, it is not mandatory that each try block must be followed by a catch block in java.
+	after try block, we can use either "catch" block or "finally" block.
+
+
+137) What is the output of the following Java program?
+
+
+
+
+138) What is finally block?
+	The "finally" block is used to execute the important code of the program. 
+	It is executed whether an exception is handled or not.
+	In other words, we can say that finally block is the block which is always executed.
+	Finally block follows try or catch block.
+	The finally block is mainly used to place the cleanup code such as closing a file or closing a connection.
+	There can only be one finally block.	
+
+
+
+139) Can finally block be used without a catch?
+	Yes.
+
+
+140) Is there any case when finally will not be executed?
+	if  a call to an System.exit And
+	in case of any fatal error
+
+
+
+141) What is the difference between throw and throws?
+	throw is the keyword use to throw an exception explicitly 
+	throws is the keyword is used to deligate the Exception to the calling method.
+	you can not throw multiple exception
+	you can declare multiple exceptions.
+
+142) What is the output of the following Java program?
+
+
+143) What is the output of the following Java program?
+
+
+144) Can an exception be rethrown?
+	Yes.
+
+
+145) Can subclass overriding method declare an exception if parent class method doesn't throw an exception?
+	Yes but only unchecked exception not checked.
+
+
+
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+146) What is exception propagation?
+	An Exception is first thrown from the top of the stack and if it is not caught, it drops down to the previous method, if not caught there, the exception again drops down to the previous method, and so on until they reach to very bottom of the call stack.
+	this procedure is called exception propogation.
+
+
+147) What is the output of the following Java program?
+
+
+148) What is the output of the following Java program?
+
+
+
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+149) What is String Pool?
+	String pool is the space reserved in the heap memory where string literals are stored.
+	whenever we want to creat a string litera first jvm checks in the string constant pool if there is already an object is there with the same value or Not.
+	if it is there, then rather then creating a new object, reference of that existing object is given.
+	if the string doesn't exist in the pool, a new string object is created and placed in the pool, therefore it saves the memory
+	
+
+
+150) What is the meaning of immutable regarding String?
+	Immutable means the state of the object can not be changed.
+	in java, String is immutable, that means once String Object has been created, its value can't be changed

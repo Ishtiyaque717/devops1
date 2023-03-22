@@ -1,0 +1,257 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@	Java Tpoint	@@@@@@@@@@@@@@@@@@@@@@@@@@''
+
+
+
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+51) What is this keyword in java?
+	> 'this' keyword in Java is used to refers the current class object 
+	> 'this' keyword is used to refer the current class instance method, variable and constructor	
+	> also there is 'this' constructor which is used inside constructor chaining
+	> we can Use 'this' keyword to resolve Ambiguity between Name, For Ex: if we are providing the local variable name same as that of instance variable name.
+
+
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+52) What are the main uses of 'this' keyword?
+	There are the following uses of this keyword.
+	> this can be used to refer to the current class instance variable.
+	> this can be used to invoke current class method (implicitly)
+	> this() can be used to invoke the current class constructor.
+	> this can be passed as an argument in the method call.
+	> this can be passed as an argument in the constructor call.
+	> this can be used to return the current class instance from the method.
+
+
+53) Can we assign the reference to "this" variable?
+	No.
+
+
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+54) Can this keyword be used to refer static members?
+	Yes, It is possible to use this keyword to refer static members because this is just a reference variable which refers to the current class object.
+	But it is unnecessary to access static variables through object refernece
+
+
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+55) How can constructor chaining be done using this keyword?
+	>you can use this keyword to call one constructor from another constructor of the same class if you want to call a constructor from a base class or super class then you can use the super keyword
+
+
+	constructor chaining is the process of calling one constructor from another constructor with respect to current object.
+	the main use of constructor chaining is to avoid duplicate codes while having multiple constructor	
+
+
+
+
+
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+56) What are the advantages of passing 'this' into a method instead of the current class object itself?
+	>suppose there is a class A, inside that a class having m1(), which is having argument as the same class, so when you call the method there is no restriction on that method argument that it should only pass same object argument, but if you use "this" keyword then it will always guaranteed.
+	> if you use 'this' then it is final and you cannot change the 'this' reference to any other reference.
+
+
+
+57) What is the Inheritance?
+	Inheritance is a mechanism in which one class acquires the property of another class	
+	With inheritance, we can reuse the fields and methods of the existing class.
+	
+58) Why is Inheritance used in Java?
+	> to increase the reusablity of the code
+	> with the help of inheritance we can achieve runtime polymorphisam
+	> method overriding cannot be achieved without inheritance.
+
+59) Which class is the superclass for all the classes?
+	Object class is the superclass of all other classes in java
+
+60) Why is multiple inheritance not supported in java?
+	> supose if you have two parent classes and both the parent class are having same method name, then suppose multiple inheritance is allowed in java then we will extend the child class with two parent classes then child class will not understand which class method should be inherited to avoid this complexity in java multiple inheritance via classes are not allowed
+
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+61) What is aggregation?
+	Aggregation is the type of association.
+	in which one class object is associated with another class object.
+	Aggregation is a type of has-a relationship(one object has a relation with another class object)
+	in this if container object is deleted then also contained object can still exist.
+	Aggregation can be achieved by creating contained object outside the class and associate that object with the container class,
+	so if you delete the contained object then container object will not be deleted.
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+62) What is composition?
+	composition is a type of association,
+	in which one class object is associated with another class object,
+	Composition is a type of has-a relationship (one object has a relation with another class object)
+	If container object is deleted then contained object also deleted.
+	compostion can be achieved by creating contained object within the container object.
+
+
+63) What is the difference between aggregation and composition?
+	Aggregation > it is loosely coupled
+	composition > it is tightly coupled 
+
+64) Why does Java not support pointers?
+	pointers are not safe bcoz they are unsafe and complex to understand
+	
+65) What is super in java?
+	super is a keyword in java, which is used to refer the parent class object,
+	there is super() also which bydefault calls parent class constructor.
+	if you don't write the default constructor in the parent then in child class you will get compile time error.
+
+
+66) How can constructor chaining be done by using the super keyword?
+	by calling the super() from any child constructor.
+
+
+
+67) What are the main uses of the super keyword?
+	super is a keyword use to refer the parent class object.
+	super keyword is use to invoke the parent class method.
+	super() is used to invoke parent class constructor.
+
+68) What are the differences between this and super keyword?
+	super keyword always points to the parent class contexts whereas this keyword always points to the current class context.
+	the super and this keyword must be the first statement inside constructor otherwise the compile time error
+	super keyword used to call default constructor of the parent class whereas this keyword used to call default constructor of the same class
+	Super keyword is used to access the method of parent class whereas this keyword is used to access methods of the current class
+
+
+69) What is the output of the following Java program?
+	Note:- if there is a parent child relationship then child class constructor first line is Super() by default
+
+
+70) Can you use this() and super() both in a constructor?
+	No, because this() and super() must be the first statement in the class constructor.
+
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+71)What is object cloning?
+	the object cloning is used to create the exact copy of the object.
+	clone() method is present in the object class.
+	whenever we want to clone the object then we have to implement cloneable interface by the class whose object we want to clone.	
+	if we don't implement cloneable inteface then we will get cloneNotSupported Exception.
+
+72) What is method overloading?
+	Method overloading is a concept in which you have a same method with different argument, the different argument can be based on the number Or type.
+	with the help of method overloading we can achieve compile time polymorphisam
+
+
+73) Why is method overloading not possible by changing the return type in java?
+	bcoz of ambiguity, it will not be clear to the compiler which method to be called based on return type
+
+74) Can we overload the methods by making them static?
+	No, we cannot overload the method by just applying the static keyword.
+
+75) Can we overload the main() method?
+	Yes, we can overload main methods, but it will become a normal method.
+
+76) What is method overloading with type promotion?
+	Type promotion means promoting the types
+	suppose if we have byte, then byte is promoted to int and int is promoted to long.
+	a small size datatype can be promoted to a large size datatype
+
+77) What is the output of the following Java program?
+
+
+78) What is method overriding:
+	If a subclass provides a specific implementation of a method that is already provided by its parent class, it is known as Method Overriding.
+	layman:-
+	if you have inheritance in which parent child relationship is there and if there is a method inside a parent class and if you create a same method inside the child class, then this is overriding.
+	with the help of overriding we can achieve runtime polymorphisam.sd
+
+79) Can we override the static method?
+	No, you can't override the static method because they are the part of the class, not the object.
+
+80) Why can we not override static method?
+	It is because the static method is the part of the class, and it is bound with class whereas instance method is bound with the object, and static gets memory in class area, and instance gets memory in a heap.
+
+81) Can we override the overloaded method?
+	Yes.
+
+82) Difference between method Overloading and Overriding.
+	Method Overloading:-	 it is a compile time polymorphism > it helps to increase the readability of the program > it occurs within the class > it may not require inheritance > private and final methods can be overloaded
+
+	Method Overriding:-	it is a runtime Polymorphism > it is used to grant the specific implementation of the method which is already provided by its parent class or superclass > it is performed in two classes with inheritance > it always needs inheritance > private and final methods can't be overridden
+
+
+
+
+83) Can we override the private methods?
+	No, we can't override 	> bcoz the scope of private methods is limited to the class >
+
+
+
+84) Can we change the scope of the overridden method in the subclass?
+	yes, we can > but we cannot decrease the accessiblity of the method in subclass.
+	Ex :- private can be changed to protected, public Or default
+	          the protected can be changed to public or default
+	          the default can be changed to public
+	          public will remain always public
+
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+85) Can we modify the throws clause of the superclass method while overriding it in the subclass?
+	yes, we can modify and there are following two scenario
+	a) if parent class doesn't throw any Exception then child class may Or may not throw Exception  BUt  coumplsory checked Exception should not be thrown.
+	b) if parent class throws any exception then child class may or may not throw exception But parent exception should not be thrown	
+
+
+
+
+86) What is the output of the following Java program?
+
+
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+87) Can you have virtual functions in Java?
+	Those methods which are inherited in the subclass are called virtual function.
+	Virtual functions :-  all the instance methods in Java are considered as the Virtual function except final, static, and private methods 
+
+
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+88) What is covariant return type?
+	> it is a new concept introduced in java 1.5, in which we can change the return type of overridden method, but there should be parent child relationship betwee return type.
+	> before this concept, we can't change the return type of overridden method
+	>  The covariant return type is applicable only for object types not for primitive types.
+ 	
+
+89) What is the output of the following Java program?
+
+
+
+90) What is the final variable?
+	If a variable is declared with the final keyword, its value cannot be changed once initialized.
+
+91) What is the final method?
+	final method in java is the method that cannot be changed or overridden once defined.
+00
+
+92) What is the final class?
+	if we make any class final, we can't inherit it into any of the subclasses.
+
+
+93) What is the final blank variable?
+	A final variable not initialized at the time of declaration, is known as the final blank variable.	
+
+94) Can we initialize the final blank variable?
+	Yes, we can initialize the final blank variable
+	if instance final blank variable then we can initialize it in the constructor
+	if static blank final variable then we can initialized only in static block
+
+95) Can you declare the main method as final?
+	yes, we can
+
+96) What is the output of the following Java program?
+
+
+
+
+97) What is the output of the following Java program?
+
+
+
+
+98) Can we declare a constructor as final?
+	No, we can't, bcoz constructor never be inherited.
+	(final keyword prevents inheritance)
+
+99) Can we declare an interface as final?
+	No, we can't bcoz interface must be implemented by some class.
+
+
+100) What is the difference between the final method and abstract method?
+	we can't override final method > wherever we have to override abstract method
+
